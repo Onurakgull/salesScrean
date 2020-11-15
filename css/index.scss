@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;900&display=swap');
+
+*{
+    padding:0;
+    margin: 0px;
+    list-style: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family:'Mulish', sans-serif;
+    -webkit-overflow-scrolling: touch;
+
+    &:focus{
+        outline: 0;
+    }
+}   
+body{
+    background-color: #ebeef2;
+    padding: 20px;
+}
+.component {
+    &--prices{
+        max-width: 920px;
+        margin: 0 auto;
+        .title{
+            display: flex;//yan yana gelmeleri için yazılır.
+            justify-content: space-between;//aralarında mesafe olması sağlanır.
+            align-items: center;   //ortalama işlemini yapar.
+            margin-bottom: 55px;
+
+            h3{
+                font-size: 42px;
+                font-weight: 900;
+                
+            }
+            label{
+                width: 212px;
+                height: 50px;
+                background-color:#d4d9e0 ;
+                border-radius: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                z-index: 1;
+                &::before{
+                    content: '';
+                    width: 100px;
+                    height: 40px;
+                    border-radius: 40px;
+                    background-color: #ffffff;
+                    position: absolute;
+                    top: 5px;
+                    left: 5px;
+                    z-index: -1;
+                    box-shadow: 0 15px 13px --12px rgba(#8693a4, .74);
+                }
+                span{
+                    width: 100px;
+                    height: 50px;
+                    font-size: 16px;
+                    font-weight: bold;
+                    display: grid;
+                    place-items: center;
+                   text-align: center;
+                   color: #171922;
+                   opacity: .7;
+                }
+            } 
+        }
+        .packaces{
+            display: flex;
+            .packace{
+               flex: 1;
+               background-color: #ffffff;
+               margin: 0 20px;
+               padding: 45px;
+               color: #171922;
+               font-weight: bold;
+               transition: 400ms background-color ease-in-out,400ms color ease-in-out;
+               h5{
+                   margin-bottom: 35px;
+                   font-size: 28px;
+               }
+               .price-info{
+                   margin-bottom: 30px;
+                   .price{
+                       font-size: 22px;
+                       font-weight: bold;
+                       margin-bottom: 30px;
+                       span::before{
+                        content: attr(data-monthly-price) ;}
+                   }
+                   .description{
+                       font-size: 18px;
+                       opacity: .71;
+                       span::before{
+                        content: attr(data-monthly-text);
+                       }
+                   }
+                  
+               } p{
+                       font-size: 16px;
+                       font-weight: 600;
+                       opacity: .71;
+                       margin-bottom: 30px;
+                       line-height: 25px;
+                   }
+                   .button{
+                       height: 60px;
+                       display: grid;
+                       width: 100%;
+                       place-items: center;
+                       border:solid 1px #171922 ;
+                       border-radius: 5px;
+                       font-size: 18px;
+                       font-weight: 600;
+                       color: #171922;
+                       transition: 400ms background-color ease-in-out, 400ms color ease-in-out;
+                   }
+                   &:hover{
+                       .button{
+                             background-color: #171922;
+                             color: #ffffff;
+                       }
+                     
+                   }
+            }
+        }
+    }
+}

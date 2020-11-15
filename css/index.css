@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;900&display=swap");
+* {
+  padding: 0;
+  margin: 0px;
+  list-style: none;
+  border: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Mulish', sans-serif;
+  -webkit-overflow-scrolling: touch;
+}
+
+*:focus {
+  outline: 0;
+}
+
+body {
+  background-color: #ebeef2;
+  padding: 20px;
+}
+
+.component--prices {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.component--prices .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 55px;
+}
+
+.component--prices .title h3 {
+  font-size: 42px;
+  font-weight: 900;
+}
+
+.component--prices .title label {
+  width: 212px;
+  height: 50px;
+  background-color: #d4d9e0;
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.component--prices .title label::before {
+  content: '';
+  width: 100px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: -1;
+  -webkit-box-shadow: 0 15px 25px rgba(134, 147, 164, 0.74);
+          box-shadow: 0 15px 25px rgba(134, 147, 164, 0.74);
+}
+
+.component--prices .title label span {
+  width: 100px;
+  height: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #171922;
+  opacity: .7;
+}
+
+.component--prices .packaces {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.component--prices .packaces .packace {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: #ffffff;
+  margin: 0 20px;
+  padding: 45px;
+  color: #171922;
+  font-weight: bold;
+  -webkit-transition: 400ms background-color ease-in-out,400ms color ease-in-out;
+  transition: 400ms background-color ease-in-out,400ms color ease-in-out;
+}
+
+.component--prices .packaces .packace h5 {
+  margin-bottom: 35px;
+  font-size: 28px;
+}
+
+.component--prices .packaces .packace .price-info {
+  margin-bottom: 30px;
+}
+
+.component--prices .packaces .packace .price-info .price {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.component--prices .packaces .packace .price-info .price span::before {
+  content: attr(data-monthly-price);
+}
+
+.component--prices .packaces .packace .price-info .description {
+  font-size: 18px;
+  opacity: .71;
+}
+
+.component--prices .packaces .packace .price-info .description span::before {
+  content: attr(data-monthly-text);
+}
+
+.component--prices .packaces .packace p {
+  font-size: 16px;
+  font-weight: 600;
+  opacity: .71;
+  margin-bottom: 30px;
+  line-height: 25px;
+}
+
+.component--prices .packaces .packace .button {
+  height: 60px;
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  place-items: center;
+  border: solid 1px #171922;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #171922;
+  -webkit-transition: 400ms background-color ease-in-out, 400ms color ease-in-out;
+  transition: 400ms background-color ease-in-out, 400ms color ease-in-out;
+}
+
+.component--prices .packaces .packace:hover .button {
+  background-color: #171922;
+  color: #ffffff;
+}
+/*# sourceMappingURL=index.css.map */
